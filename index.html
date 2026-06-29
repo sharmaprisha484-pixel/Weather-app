@@ -9,13 +9,17 @@
 <body>
      <h1>Weather App</h1>
 
-     <input type="text" id="city" placeholder="Enter City">
+     <input type="text"
+         id="city"
+         placeholder="Enter City Name"
+         onkeypress="if(event.key==='Enter') test()"
+        >
 
      <button onclick="test()">Search</button>
 
      <h2>Weather Details</h2>
 
-    <p> 🌡️ Temperature : <span id="temp">--</span></p>
+     <p> 🌡️ Temperature : <span id="temp">--</span></p>
 
      <p> 🌤️ Condition : <span id="condition">--</span></p> 
 
@@ -25,7 +29,7 @@
 
      <p> 🌝 Feels Like : <span id="feels">--</span></p>
 
-     <p> 🗓️ Date: <span id="date">--</span></p>
+     <p> 🗓️ Day & Date : <span id="date">--</span></p>
 
      <img id="icon" width="100">
 
@@ -33,10 +37,13 @@
 
      <h3 id="cityName">City Name</h3>
 
-     <p id="date"></p>
+     
 
+     <button onclick="getLocation()">📍Use My Location</button>
 
-    
+     <button onclick="changeUnit()">℉</button>
+
+     
 
       <script src="script.js"></script>
 </body>
